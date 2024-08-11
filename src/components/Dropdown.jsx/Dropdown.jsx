@@ -1,8 +1,6 @@
-import React from "react";
-
 const Dropdown = ({ label, options, defaultOption }) => {
   return (
-    <div className="w-full max-w-xs mb-4">
+    <div className="w-full max-w-lg mb-4">
       <label className="block text-sm font-medium mb-2">{label}</label>
       <select className="select select-bordered w-full">
         <option disabled selected>

@@ -1,12 +1,12 @@
-import img1 from "../../assets/images/head.png";
+import img1 from "../../assets/images/logo2.png";
 
 const Header = () => {
   return (
     <header className="p-4 border-b-2 max-w-7xl mx-auto">
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 flex items-center justify-between">
         <div className="navbar-start flex items-center">
-          <div className="dropdown">
-            <button tabIndex={0} className="btn btn-ghost lg:hidden">
+          <div className="dropdown lg:hidden">
+            <button tabIndex={0} className="btn btn-ghost">
               {/* Hamburger icon for mobile menu */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@ const Header = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a>Parent</a>
+                <a>Features</a>
                 <ul className="p-2">
                   <li>
                     <a>Submenu 1</a>
@@ -39,7 +39,7 @@ const Header = () => {
                 </ul>
               </li>
               <li>
-                <a>Parent</a>
+                <a>Apps</a>
                 <ul className="p-2">
                   <li>
                     <a>Submenu 1</a>
@@ -50,17 +50,20 @@ const Header = () => {
                 </ul>
               </li>
               <li>
-                <a>Item 3</a>
+                <a>Pricing</a>
+              </li>
+              <li>
+                <a>Blog</a>
               </li>
             </ul>
           </div>
-          <img src={img1} alt="Logo" className="h-8 w-auto ml-4" />
+          <img src={img1} alt="Logo" className="h-12 w-auto ml-4" />
         </div>
         <div className="navbar-end hidden lg:flex items-center">
           <ul className="menu menu-horizontal px-8">
             <li>
               <details>
-                <summary>Parent</summary>
+                <summary>Features</summary>
                 <ul className="p-2">
                   <li>
                     <a>Submenu 1</a>
@@ -73,7 +76,7 @@ const Header = () => {
             </li>
             <li>
               <details>
-                <summary>Parent</summary>
+                <summary>Apps</summary>
                 <ul className="p-2">
                   <li>
                     <a>Submenu 1</a>
@@ -85,13 +88,23 @@ const Header = () => {
               </details>
             </li>
             <li>
-              <a>Item 3</a>
+              <a>Pricing</a>
+            </li>
+            <li>
+              <a>Blog</a>
             </li>
           </ul>
 
-          <div className="flex gap-4">
-            <a className="btn">Button</a>
-            <a className="btn">Button</a>
+          <div className="flex gap-2">
+            <a
+              href="#"
+              className="bg-[#ff5e29] text-white py-3 px-4 rounded-lg text-lg font-normal"
+            >
+              Sign in
+            </a>
+            <a className="btn bg-white text-black border-[#ff5e29] py-3 px-4 rounded-lg text-lg font-normal">
+              Login
+            </a>
           </div>
         </div>
       </div>

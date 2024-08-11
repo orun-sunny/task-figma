@@ -1,46 +1,28 @@
-import { useState } from "react";
 import "./App.css";
-import Blogs from "./components/Blogs/Blogs";
-import Bookmarks from "./components/Bookmarks/Bookmarks";
+
 import Header from "./components/Header/Header";
 import Button from "./components/Button/Button";
 import Dropdown from "./components/Dropdown.jsx/Dropdown";
+import CardGroup from "./components/Card/CardGroup";
+import ContentRight from "./components/ContentRight/ContentRight";
+import Footer from "./components/Footer/Footer";
+// import ContentSection from "./components/ContentSection/ContentSection";
 
 function App() {
-  const [bookmarks, setBookmarks] = useState([]);
-  const [readingTime, setReadingTime] = useState(0);
-
-  const handleAddToBookmark = (blog) => {
-    const newBookmarks = [...bookmarks, blog];
-    setBookmarks(newBookmarks);
-  };
-
-  const handleMarkAsRead = (id, time) => {
-    const newReadingTime = readingTime + time;
-    setReadingTime(newReadingTime);
-    // remove the read blog from bookmark
-    // console.log('remove bookmark', id)
-    const remainingBookmarks = bookmarks.filter(
-      (bookmark) => bookmark.id !== id
-    );
-    setBookmarks(remainingBookmarks);
-  };
-
   return (
     <>
       <Header></Header>
-      <div className="md:flex max-w-7xl mx-auto">
-        <div>
+
+      <div className="md:flex max-w-7xl mx-auto p-4 ">
+        <div className="border shadow-md rounded-lg">
           <Button />
           <Dropdown />
+          <CardGroup />
         </div>
 
-        {/* <Blogs
-          handleAddToBookmark={handleAddToBookmark}
-          handleMarkAsRead={handleMarkAsRead}
-        ></Blogs> */}
-        <Bookmarks bookmarks={bookmarks} readingTime={readingTime}></Bookmarks>
+        <ContentRight />
       </div>
+      <Footer />
     </>
   );
 }
